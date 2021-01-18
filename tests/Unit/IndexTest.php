@@ -1,7 +1,7 @@
 <?php
 
 namespace tests\Unit;
-use App\Index;
+use Src\RevertCharacters;
 use PHPUnit\Framework\TestCase;
 
 class IndexTest extends TestCase
@@ -10,7 +10,7 @@ class IndexTest extends TestCase
     public function testInvertString()
     {
 
-        $index = new Index();
+        $index = new RevertCharacters();
 
         $this->AssertEquals(
             $index->invertWordsInString("Привет! Давно не виделись."),
@@ -21,7 +21,7 @@ class IndexTest extends TestCase
     public function testInvertStringAnyUpperCaseAndPunctuation()
     {
 
-        $index = new Index();
+        $index = new RevertCharacters();
 
         $this->AssertEquals(
             $index->invertWordsInString("Привет! ДавНо, не ВидеЛись."),
